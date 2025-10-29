@@ -6,17 +6,11 @@
   <div class="hero-background">
     <div class="snowflakes" aria-hidden="true">
       <div class="snowflake">❅</div>
-      <div class="snowflake">❅</div>
       <div class="snowflake">❆</div>
       <div class="snowflake">❄</div>
       <div class="snowflake">❅</div>
       <div class="snowflake">❆</div>
-      <div class="snowflake">❄</div>
-      <div class="snowflake">❅</div>
-      <div class="snowflake">❆</div>
-      <div class="snowflake">❄</div>
     </div>
-    <div class="lights-overlay"></div>
   </div>
 
   <div class="hero-content">
@@ -61,7 +55,7 @@
     z-index: 0;
   }
 
-  /* Animated snowflakes */
+  /* Animated snowflakes - optimized for performance */
   .snowflakes {
     position: absolute;
     inset: 0;
@@ -72,119 +66,50 @@
   .snowflake {
     position: absolute;
     top: -10%;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 1.5rem;
     animation: fall linear infinite;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    will-change: transform;
   }
 
   .snowflake:nth-child(1) {
-    left: 10%;
-    animation-duration: 10s;
+    left: 15%;
+    animation-duration: 12s;
     animation-delay: 0s;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .snowflake:nth-child(2) {
-    left: 20%;
-    animation-duration: 12s;
-    animation-delay: 2s;
-    font-size: 1.8rem;
+    left: 40%;
+    animation-duration: 14s;
+    animation-delay: 3s;
+    font-size: 1.6rem;
   }
 
   .snowflake:nth-child(3) {
-    left: 30%;
-    animation-duration: 9s;
-    animation-delay: 4s;
+    left: 65%;
+    animation-duration: 11s;
+    animation-delay: 1.5s;
     font-size: 1.4rem;
   }
 
   .snowflake:nth-child(4) {
-    left: 40%;
-    animation-duration: 11s;
-    animation-delay: 1s;
-    font-size: 1.6rem;
-  }
-
-  .snowflake:nth-child(5) {
-    left: 50%;
+    left: 80%;
     animation-duration: 13s;
-    animation-delay: 3s;
-    font-size: 1.3rem;
-  }
-
-  .snowflake:nth-child(6) {
-    left: 60%;
-    animation-duration: 10s;
-    animation-delay: 5s;
-    font-size: 1.7rem;
-  }
-
-  .snowflake:nth-child(7) {
-    left: 70%;
-    animation-duration: 12s;
-    animation-delay: 2s;
+    animation-delay: 4s;
     font-size: 1.5rem;
   }
 
-  .snowflake:nth-child(8) {
-    left: 80%;
-    animation-duration: 11s;
-    animation-delay: 4s;
-    font-size: 1.4rem;
-  }
-
-  .snowflake:nth-child(9) {
-    left: 90%;
-    animation-duration: 9s;
-    animation-delay: 1s;
-    font-size: 1.6rem;
-  }
-
-  .snowflake:nth-child(10) {
-    left: 15%;
-    animation-duration: 13s;
-    animation-delay: 6s;
-    font-size: 1.8rem;
+  .snowflake:nth-child(5) {
+    left: 25%;
+    animation-duration: 15s;
+    animation-delay: 2s;
+    font-size: 1.2rem;
   }
 
   @keyframes fall {
-    0% {
-      transform: translateY(0) rotate(0deg);
-      opacity: 1;
-    }
-    100% {
+    to {
       transform: translateY(110vh) rotate(360deg);
-      opacity: 0.7;
-    }
-  }
-
-  /* Twinkling lights overlay */
-  .lights-overlay {
-    position: absolute;
-    inset: 0;
-    background-image:
-      radial-gradient(2px 2px at 20% 30%, #DC2626, transparent),
-      radial-gradient(2px 2px at 60% 70%, #16A34A, transparent),
-      radial-gradient(2px 2px at 50% 50%, #FBBF24, transparent),
-      radial-gradient(2px 2px at 80% 10%, #DC2626, transparent),
-      radial-gradient(2px 2px at 90% 60%, #16A34A, transparent),
-      radial-gradient(2px 2px at 30% 80%, #FBBF24, transparent),
-      radial-gradient(2px 2px at 70% 40%, #DC2626, transparent),
-      radial-gradient(2px 2px at 10% 60%, #16A34A, transparent);
-    background-size: 200% 200%;
-    animation: twinkle 4s ease-in-out infinite;
-    opacity: 0.4;
-  }
-
-  @keyframes twinkle {
-    0%, 100% {
-      opacity: 0.3;
-      background-position: 0% 0%;
-    }
-    50% {
-      opacity: 0.6;
-      background-position: 100% 100%;
     }
   }
 
