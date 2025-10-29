@@ -1,0 +1,265 @@
+---
+// Header component for Surprise Christmas Lights
+---
+
+<header class="header">
+  <div class="header-container">
+    <div class="logo">
+      <a href="/">Surprise Christmas Lights</a>
+    </div>
+
+    <nav class="nav-desktop">
+      <a href="/">Home</a>
+      <a href="/residential">Residential</a>
+      <a href="/commercial">Commercial</a>
+      <a href="/service-areas">Service Areas</a>
+      <a href="/faq">FAQ</a>
+    </nav>
+
+    <div class="header-cta">
+      <a href="tel:6022078848" class="phone-link">
+        <svg class="phone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+        <span class="phone-number">602-207-8848</span>
+      </a>
+      <a href="#quote" class="cta-button">Get Free Quote</a>
+    </div>
+
+    <button class="mobile-menu-button" aria-label="Toggle menu">
+      <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+
+  <nav class="nav-mobile">
+    <a href="/">Home</a>
+    <a href="/residential">Residential</a>
+    <a href="/commercial">Commercial</a>
+    <a href="/service-areas">Service Areas</a>
+    <a href="/faq">FAQ</a>
+    <a href="tel:6022078848" class="mobile-phone">
+      <svg class="phone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+      602-207-8848
+    </a>
+    <a href="#quote" class="cta-button">Get Free Quote</a>
+  </nav>
+</header>
+
+<style>
+  .header {
+    background: #111827;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .header-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .logo a {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .nav-desktop {
+    display: none;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .nav-desktop a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+
+  .nav-desktop a:hover {
+    color: #16A34A;
+  }
+
+  .header-cta {
+    display: none;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .phone-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+
+  .phone-link:hover {
+    color: #16A34A;
+  }
+
+  .phone-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .phone-number {
+    font-size: 1.1rem;
+  }
+
+  .cta-button {
+    background: #DC2626;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
+  }
+
+  .cta-button:hover {
+    background: #B91C1C;
+  }
+
+  .mobile-menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin: -0.5rem -0.5rem -0.5rem 0;
+  }
+
+  .menu-icon,
+  .close-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .close-icon {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem 1.5rem;
+    background: #1F2937;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-mobile a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+
+  .nav-mobile a:hover {
+    background: #374151;
+  }
+
+  .nav-mobile .mobile-phone {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #16A34A;
+  }
+
+  .nav-mobile .cta-button {
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+
+  /* Tablet and up */
+  @media (min-width: 768px) {
+    .header-container {
+      padding: 1.25rem 2rem;
+    }
+
+    .logo a {
+      font-size: 1.5rem;
+    }
+
+    .nav-desktop {
+      display: flex;
+    }
+
+    .mobile-menu-button {
+      display: none;
+    }
+  }
+
+  /* Desktop */
+  @media (min-width: 1024px) {
+    .header-cta {
+      display: flex;
+    }
+  }
+
+  /* Mobile menu open state */
+  .header.menu-open .nav-mobile {
+    display: flex;
+  }
+
+  .header.menu-open .menu-icon {
+    display: none;
+  }
+
+  .header.menu-open .close-icon {
+    display: block;
+  }
+</style>
+
+<script>
+  // Mobile menu toggle
+  const menuButton = document.querySelector('.mobile-menu-button');
+  const header = document.querySelector('.header');
+  const mobileLinks = document.querySelectorAll('.nav-mobile a');
+
+  menuButton?.addEventListener('click', () => {
+    header?.classList.toggle('menu-open');
+  });
+
+  // Close menu when clicking a link
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      header?.classList.remove('menu-open');
+    });
+  });
+</script>

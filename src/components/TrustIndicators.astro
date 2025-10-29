@@ -1,0 +1,152 @@
+---
+// Trust Indicators component for Surprise Christmas Lights
+---
+
+<section class="trust-indicators">
+  <div class="container">
+    <div class="indicators-grid">
+      <!-- 5-Star Reviews -->
+      <div class="indicator-card">
+        <div class="indicator-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="48" height="48">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        </div>
+        <h3 class="indicator-title">5-Star Reviews</h3>
+        <p class="indicator-description">Trusted by hundreds of happy homeowners</p>
+      </div>
+
+      <!-- Local Experts -->
+      <div class="indicator-card">
+        <div class="indicator-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="48" height="48">
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <h3 class="indicator-title">Local Experts in Surprise</h3>
+        <p class="indicator-description">Serving your neighborhood with pride</p>
+      </div>
+
+      <!-- Fast Service -->
+      <div class="indicator-card">
+        <div class="indicator-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="48" height="48">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <h3 class="indicator-title">Fast Service</h3>
+        <p class="indicator-description">48-hour installation available</p>
+      </div>
+
+      <!-- Professional & Insured -->
+      <div class="indicator-card">
+        <div class="indicator-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="48" height="48">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <h3 class="indicator-title">Professional & Insured</h3>
+        <p class="indicator-description">Licensed, bonded, and fully insured</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .trust-indicators {
+    padding: 4rem 0;
+    background: var(--color-light);
+  }
+
+  .indicators-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .indicator-card {
+    background: var(--color-white);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .indicator-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+  }
+
+  .indicator-icon {
+    color: var(--color-red);
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .indicator-icon svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .indicator-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .indicator-description {
+    font-size: 1rem;
+    color: var(--color-gray);
+    line-height: 1.5;
+  }
+
+  /* Tablet: 2 columns */
+  @media (min-width: 768px) {
+    .trust-indicators {
+      padding: 5rem 0;
+    }
+
+    .indicators-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+    }
+
+    .indicator-card {
+      padding: 2.5rem;
+    }
+
+    .indicator-title {
+      font-size: 1.375rem;
+    }
+  }
+
+  /* Desktop: 4 columns */
+  @media (min-width: 1024px) {
+    .trust-indicators {
+      padding: 6rem 0;
+    }
+
+    .indicators-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .indicator-card {
+      padding: 2rem 1.5rem;
+    }
+
+    .indicator-title {
+      font-size: 1.25rem;
+    }
+
+    .indicator-description {
+      font-size: 0.9375rem;
+    }
+  }
+</style>

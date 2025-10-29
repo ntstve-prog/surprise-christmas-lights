@@ -1,0 +1,129 @@
+---
+import Footer from '../components/Footer.astro';
+
+interface Props {
+	title: string;
+	description?: string;
+	keywords?: string;
+}
+
+const {
+	title,
+	description = "Professional Christmas light installation services in Surprise, AZ. Expert holiday lighting design, installation, and removal. Free quotes available.",
+	keywords = "christmas lights, holiday lighting, Surprise AZ, light installation, christmas decorations"
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+
+		<!-- SEO Meta Tags -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+
+		<!-- Local Business Schema -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "LocalBusiness",
+			"name": "Surprise Christmas Lights",
+			"description": "Professional Christmas light installation services in Surprise, AZ",
+			"telephone": "602-207-8848",
+			"email": "surprisechristmaslights@gmail.com",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Surprise",
+				"addressRegion": "AZ"
+			},
+			"areaServed": "Surprise, AZ",
+			"priceRange": "$$"
+		}
+		</script>
+
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+		<Footer />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--color-red: #DC2626;
+		--color-red-dark: #B91C1C;
+		--color-green: #16A34A;
+		--color-green-dark: #15803D;
+		--color-yellow: #FBBF24;
+		--color-dark: #111827;
+		--color-gray-dark: #1F2937;
+		--color-gray: #6B7280;
+		--color-gray-light: #E5E7EB;
+		--color-light: #F3F4F6;
+		--color-white: #FFFFFF;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	html {
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		scroll-behavior: smooth;
+	}
+
+	body {
+		margin: 0;
+		background: var(--color-white);
+		color: var(--color-dark);
+		line-height: 1.6;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		line-height: 1.2;
+		font-weight: 700;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	a {
+		color: inherit;
+		transition: all 0.2s ease;
+	}
+
+	button {
+		font-family: inherit;
+	}
+
+	/* Utility classes */
+	.container {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 0 1.5rem;
+	}
+
+	@media (min-width: 768px) {
+		.container {
+			padding: 0 2rem;
+		}
+	}
+</style>
