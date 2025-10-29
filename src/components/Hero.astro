@@ -4,6 +4,20 @@
 
 <section class="hero">
   <div class="hero-background">
+    <!-- Christmas lights string -->
+    <div class="christmas-lights" aria-hidden="true">
+      <div class="light-bulb red"></div>
+      <div class="light-bulb green"></div>
+      <div class="light-bulb yellow"></div>
+      <div class="light-bulb red"></div>
+      <div class="light-bulb green"></div>
+      <div class="light-bulb yellow"></div>
+      <div class="light-bulb red"></div>
+      <div class="light-bulb green"></div>
+      <div class="light-bulb yellow"></div>
+      <div class="light-bulb red"></div>
+    </div>
+
     <div class="snowflakes" aria-hidden="true">
       <div class="snowflake">❅</div>
       <div class="snowflake">❆</div>
@@ -110,6 +124,79 @@
   @keyframes fall {
     to {
       transform: translateY(110vh) rotate(360deg);
+    }
+  }
+
+  /* Christmas Lights - Optimized for performance */
+  .christmas-lights {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    pointer-events: none;
+    z-index: 10;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .light-bulb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: relative;
+    animation: twinkle 2s ease-in-out infinite;
+    will-change: opacity;
+  }
+
+  /* Brand colors for bulbs */
+  .light-bulb.red {
+    background: radial-gradient(circle at 30% 30%, #FCA5A5, #DC2626);
+    box-shadow: 0 0 10px rgba(220, 38, 38, 0.6);
+  }
+
+  .light-bulb.green {
+    background: radial-gradient(circle at 30% 30%, #86EFAC, #16A34A);
+    box-shadow: 0 0 10px rgba(22, 163, 74, 0.6);
+    animation-delay: 0.66s;
+  }
+
+  .light-bulb.yellow {
+    background: radial-gradient(circle at 30% 30%, #FDE68A, #FBBF24);
+    box-shadow: 0 0 10px rgba(251, 191, 36, 0.6);
+    animation-delay: 1.33s;
+  }
+
+  /* Performance-optimized twinkle animation - opacity only */
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
+
+  /* Responsive sizing for lights */
+  @media (min-width: 768px) {
+    .christmas-lights {
+      top: 30px;
+    }
+
+    .light-bulb {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .light-bulb {
+      width: 24px;
+      height: 24px;
     }
   }
 
