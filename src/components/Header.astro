@@ -48,11 +48,11 @@
   .header-container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0.5rem 1rem 0.5rem 7.5rem; /* Extra left padding for logo */
+    padding: 0.5rem 0.75rem 0.5rem 6.75rem; /* Extra left padding for logo, reduced right padding */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 0.5rem;
     position: relative;
   }
 
@@ -93,10 +93,11 @@
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.8125rem;
     color: #16A34A;
-    white-space: nowrap;
     font-weight: 600;
     font-style: italic;
     letter-spacing: 0.01em;
+    line-height: 1.2;
+    max-width: 6.5rem; /* Force wrapping on mobile */
   }
 
   /* ===================================
@@ -141,11 +142,11 @@
   .cta-button {
     background: #DC2626;
     color: #FFFFFF;
-    padding: 0.5rem 1rem; /* 8px 16px */
+    padding: 0.5rem 0.75rem; /* 8px 12px - reduced for mobile */
     border-radius: 0.5rem; /* 8px */
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.25rem; /* 20px */
+    font-size: 1.125rem; /* 18px - reduced for mobile */
     transition: background 0.2s ease;
     white-space: nowrap;
     box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
@@ -189,6 +190,8 @@
     /* Adjust sizing */
     .hours-text {
       font-size: 0.9375rem;
+      max-width: none; /* Remove wrap constraint */
+      white-space: nowrap; /* Single line on tablet+ */
     }
 
     /* Show phone link */
@@ -198,7 +201,7 @@
 
     .cta-button {
       padding: 0.625rem 1.25rem; /* 10px 20px */
-      font-size: 1.375rem; /* 22px */
+      font-size: 1.25rem; /* 20px */
     }
   }
 
