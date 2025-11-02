@@ -55,9 +55,16 @@
     </div>
 
     <div class="footer-bottom">
-      <p class="copyright">
-        &copy; {new Date().getFullYear()} Surprise Christmas Lights. All rights reserved.
-      </p>
+      <div class="footer-bottom-left">
+        <p class="copyright">
+          &copy; {new Date().getFullYear()} Surprise Christmas Lights. All rights reserved.
+        </p>
+        <div class="footer-legal-links">
+          <a href="/privacy-policy" class="footer-legal-link">Privacy Policy</a>
+          <span class="footer-legal-separator">|</span>
+          <a href="/terms-and-conditions" class="footer-legal-link">Terms & Conditions</a>
+        </div>
+      </div>
       <p class="business-info">
         Licensed & Insured | Professional Christmas Light Installation
       </p>
@@ -192,15 +199,44 @@
     text-align: center;
   }
 
+  .footer-bottom-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
   .copyright {
     font-size: 0.875rem;
     color: var(--color-gray-light);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .footer-legal-links {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .footer-legal-link {
+    color: var(--color-gray-light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer-legal-link:hover {
+    color: var(--color-white);
+  }
+
+  .footer-legal-separator {
+    color: var(--color-gray);
   }
 
   .business-info {
     font-size: 0.875rem;
     color: var(--color-gray);
+    margin-top: 0.75rem;
   }
 
   /* Tablet */
@@ -220,9 +256,17 @@
       align-items: center;
     }
 
+    .footer-bottom-left {
+      align-items: flex-start;
+    }
+
     .copyright,
     .business-info {
       margin-bottom: 0;
+    }
+
+    .business-info {
+      margin-top: 0;
     }
   }
 
